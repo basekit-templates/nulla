@@ -1,0 +1,1000 @@
+// --------------------------------------
+// BaseKit Standard Template: LESS > Widgets
+// --------------------------------------
+
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+//  1.   #LOGO
+//  2.   #COMPANY NAME
+//  3.   #NAVIGATION
+//  4.   #FEATURE
+
+//  5.   #IMAGES
+//  6.   #GALLERY
+//  7.   #SLIDESHOW
+
+//  8.   #BUTTONS
+//  8.1  -- #STANDARD
+//  8.2  -- #TWEET
+//  8.3  -- #DROPBOX
+//  8.4  -- #CLICK TO CALL
+//  8.5  -- #PAYPAL
+
+//  9.   #CONTACT FORM
+// 10.   #SIGNUP FORM & BLOG SEARCH
+
+// 11.   #SOCIAL ICONS
+// 12.   #TWITTER FEED
+
+// 13.   #DIVIDER (KEYLINE)
+// 14.   #PROFILE
+// 15.   #MAP
+// 16.   #YELP
+
+
+
+// -----------------------------
+// 1.  #Logo
+// -----------------------------
+
+// Style for desktop
+@media only screen and (min-width: 770px) {
+    .brand .widget {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .company-logo {
+        margin-right: 5px;
+    }
+    .template-header .logo-image {
+        margin-bottom: 0;
+    }
+}
+
+.template-header .logo-image {
+    margin: 0 auto;
+}
+
+.template-footer .logo-image {
+    margin-bottom: 10px;
+}
+
+
+
+
+// -----------------------------
+// 2.  #Company Name
+// -----------------------------
+
+.company-link:hover {
+    text-decoration: none;
+    color: @color-swatch3;
+}
+
+
+
+
+// -----------------------------
+// 3.  #Navigation
+// -----------------------------
+
+// Navigation alignment
+.extendednavigation {
+    &.align-left { text-align: left; }
+    &.align-right { text-align: right; }
+    &.align-center { text-align: center; }
+}
+
+// Folder Item Parent: Gives arrow
+.item-name--parent {
+    &:after {
+        display: inline-block;
+        vertical-align: middle;
+        content: "";
+        margin-left: 4px;
+        border: 5px solid transparent;
+        border-top-color: @font-swatch6-color;
+    }
+    &:hover:after {
+        border-top-color: @font-swatch6-color-hover;
+    }
+}
+
+// Folder
+.navigation-list--children {
+    white-space: normal;
+    width: auto;
+    border: 1px solid lighten(@color-swatch5, 35%);
+}
+
+// Hover effect for desktop
+@media only screen and (min-width: 770px) {
+    .navigation-list:not(.navigation-list--children) {
+        position: relative;
+    }
+    .navigation-item .item-name {
+        padding: 0;
+        margin: 5px 14px;
+        -webkit-transition: color 0.3s;
+        -moz-transition: color 0.3s;
+        transition: color 0.3s;
+    }
+} //end styles for desktop
+
+
+// Selected nav item
+.navigation-item.selected > .item-name { color: @font-swatch6-color-hover; }
+
+
+// Collapsible navigation
+// ----------------------
+
+.navigation-toggle { display: none; }
+
+@media @tablet {
+    .navigation-toggle {
+        display: inline-block;
+        width: 100%;
+        height: 45px;
+        line-height: 0;
+        background-color: @color-swatch1;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        border-bottom: none;
+        box-shadow: none;
+        text-indent: 1000px;
+        overflow: hidden;
+        outline: 0;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 26px;
+            height: 3px;
+            top: 0;
+            left: 50%;
+            right: 0;
+            margin-top: 15px;
+            margin-left: -13px;
+            background: @font-swatch6-color-hover;
+            box-shadow: 0 6px 0 @font-swatch6-color-hover;
+            .transition( all, 0.5s, ease );
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            width: 26px;
+            height: 3px;
+            top: 12px;
+            left: 50%;
+            right: 0;
+            margin-top: 15px;
+            margin-left: -13px;
+            background: @font-swatch6-color-hover;
+            .transition( all, 0.5s, ease );
+        }
+        &:hover {
+            background-color: @font-swatch6-color-hover;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            border-bottom: 1px solid darken(@color-swatch1, 20%);
+            box-shadow: none;
+            &:before {
+                background: @color-swatch1;
+                box-shadow: 0 6px 0 @color-swatch1;
+            }
+            &:after {
+                background: @color-swatch1;
+            }
+        }
+    }
+    // Toggle Button Open State
+    .open & {
+        &.navigation-toggle {
+            background-color: @font-swatch6-color-hover;
+             &:before {
+                margin-top: 21px;
+                background: @color-swatch1;
+                box-shadow: none;
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+                .transition( all, 0.5s, ease );
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                width: 26px;
+                height: 3px;
+                top: 0;
+                left: 50%;
+                right: 0;
+                margin-top: 21px;
+                margin-left: -13px;
+                background: @color-swatch1;
+                box-shadow: none;
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                .transition( all, 0.5s, ease );
+            }
+        }
+    }
+    .navigation-body {
+        display: none;
+        .open & {
+            display: block;
+        }
+    }
+    .navigation-item {
+        width: 100%;
+        border-bottom: 1px solid lighten(@color-swatch5, 35%);
+    }
+    .navigation-item--child {
+        background-color: darken(@color-swatch1, 3%);
+    }
+}
+
+
+
+
+// -----------------------------
+// 4.  #Feature
+// -----------------------------
+
+// Style for Desktop
+.feature {
+    .background-image,
+    .content-wrap {
+        min-height: 700px;
+        height: 700px;
+    }
+}
+
+.feature__background-image {
+    display: table;
+    width: 100%;
+    background-size: cover;
+}
+
+.feature .content-wrap {
+    vertical-align: bottom;
+    display: table-cell;
+    text-align: left;
+    background-color: hsla(hue(@color-swatch4),
+                       saturation(@color-swatch4),
+                       lightness(lighten(@color-swatch4,10%)),
+                       .3);
+}
+
+.content-inner-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature__headline {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    font-family: @font-swatch8-font-family;
+    color: @font-swatch8-color;
+    font-size: @font-swatch8-font-size;
+    font-weight: @font-swatch8-font-weight;
+    line-height: @font-swatch8-line-height;
+}
+
+.feature__strapline {
+    font-family: @font-swatch9-font-family;
+    color: @font-swatch9-color;
+    font-size: @font-swatch9-font-size;
+    font-weight: @font-swatch9-font-weight;
+    line-height: @font-swatch9-line-height;
+}
+
+.button.feature__button {
+    margin: 1em 0;
+    padding: 10px 45px 10px 20px;
+    border: 1px solid @color-swatch1;
+    color: @color-swatch1;
+    box-shadow: none;
+    white-space: normal;
+    &:after {
+        position: absolute;
+        padding-left: 5px;
+        content: "\2192";
+        font-size: 20px;
+    }
+    &:hover {
+        color: @color-swatch3;
+        border: 1px solid @color-swatch3;
+        box-shadow: none;
+    }
+}
+
+// Tablet
+@media @tablet {
+    .feature .background-image,
+    .feature .content-wrap {
+        min-height: 400px;
+        height: 400px;
+    }
+    .feature .headline {
+        font-size: bkscale(@font-swatch8-font-size, .7);
+        line-height: bkscale(@font-swatch8-line-height, .8);
+    }
+    .feature .strapline {
+        font-size: bkscale(@font-swatch9-font-size, .8);
+        line-height: bkscale(@font-swatch9-line-height, .9);
+    }
+}
+
+// Mobile
+@media only screen and (max-width: 570px) {
+    .feature .background-image,
+    .feature .content-wrap {
+        min-height: 300px;
+        height: 300px;
+    }
+    .feature .headline {
+        font-size: bkscale(@font-swatch8-font-size, .3);
+        line-height: bkscale(@font-swatch8-line-height, .4);
+    }
+    .feature .strapline {
+        font-size: bkscale(@font-swatch9-font-size, .7);
+        line-height: bkscale(@font-swatch9-line-height, .8);
+    }
+    .feature .button {
+        margin: 8px 0;
+        padding: 8px 35px 8px 10px;
+        width: auto;
+    }
+}
+
+
+
+
+// -----------------------------
+// 5.  #Images
+// -----------------------------
+
+// Image Widget
+// ------------
+
+.image-link {
+    display: inline-block;
+}
+
+// Image Captions
+// --------------
+
+// Gallery & Slideshow
+
+.image-title {
+    padding-bottom: 5px;
+    font-family: @font-swatch3-font-family;
+    font-size: @font-swatch3-font-size;
+    font-weight: @font-swatch3-font-weight;
+    line-height: @font-swatch3-line-height;
+    color: @color-swatch7;
+    letter-spacing: @font-swatch3-letter-spacing;
+}
+.image-description {
+    color: @color-swatch1;
+}
+
+// Image Widget
+.imagewidget__caption {
+    margin-top: 5px;
+    .image-title {
+        padding-bottom: 0;
+        color: @color-swatch4;
+    }
+}
+
+.imagewidget__image-description {
+    color: @font-swatch5-color;
+}
+
+
+
+// -----------------------------
+// 6.  #Gallery
+// -----------------------------
+
+// 100% width
+div#page-zones__main-widgets__galleryWidget {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    @media @tablet {
+        width: 90%;
+        margin: 0 5%;
+    }
+}
+
+// Gallery Layout
+// --------------
+
+// Gallery List
+.gallery-list {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background-color: @color-swatch4;
+    padding-top: 1px;
+}
+
+// Gallery Item
+.gallery .gallery-item {
+    position: relative;
+    width: 33.3%;
+    margin-bottom: 1px;
+    @media only screen and (max-width : 925px) {
+        width: 50%;
+    }
+    @media only screen and (max-width : 650px) {
+        width: 100%;
+    }
+}
+
+
+// Gallery Images
+// --------------
+
+// Use Background-image Method
+.gallery .image-link {
+    display: block;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @media @tablet {
+        height: 346px;
+    }
+    @media only screen and (max-width : 650px) {
+        height: 250px;
+    }
+}
+
+// Gallery Images in Responsive Columns
+
+// Two Columns
+.columns-two-left,
+.columns-two-right {
+    .gallery__image-link {
+        height: 194px;
+        @media @tablet {
+            height: 151px;
+        }
+        @media @mobile {
+            height: 200px;
+        }
+    }
+    .gallery__caption {
+        padding: 10px;
+        // hide description on desktop
+        @media only screen and (min-width: 768px) {
+            .image-description {
+                display: none;
+            }
+        }
+    }
+    // hide caption on tablet only
+    @media only screen and (max-width : 768px) and (min-width : 480px) {
+        .gallery__figure:hover .gallery__caption {
+            display: none;
+        }
+    }
+}
+// Three Columns
+.columns-three-left,
+.columns-three-middle,
+.columns-three-right {
+    .gallery__image-link {
+        height: 124px;
+        @media @tablet {
+            height: 96px;
+        }
+        @media @mobile {
+            height: 200px;
+        }
+    }
+    // hide caption on desktop and tablet
+    @media only screen and (min-width: 480px) {
+        .gallery__figure:hover .gallery__caption {
+            display: none;
+        }
+    }
+}
+// Four Columns
+.columns-four-first,
+.columns-four-second,
+.columns-four-third,
+.columns-four-fourth {
+    .gallery__image-link {
+        height: 88px;
+        @media @tablet {
+            height: 151px;
+        }
+        @media @mobile {
+            height: 200px;
+        }
+    }
+    // hide caption on desktop and tablet
+    @media only screen and (min-width: 480px) {
+        .gallery__figure:hover .gallery__caption {
+            display: none;
+        }
+    }
+}
+
+
+// Hide Img Element
+.gallery .image {
+    display: none;
+}
+
+
+// Gallery Image Captions
+// ----------------------
+
+// Hide Caption
+.gallery .caption {
+    display: none;
+    margin: 0;
+    padding: 20px;
+    background-color: hsla(hue(@color-swatch4),
+                           saturation(@color-swatch4),
+                           lightness(@color-swatch4), .8);
+}
+
+// Show Caption
+.gallery__figure:hover .gallery__caption {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery .caption-link:hover {
+    text-decoration: none;
+}
+
+
+
+
+// -----------------------------
+// 7.  #Slideshow
+// -----------------------------
+
+// Slideshow Layout
+// ----------------
+
+// Slideshow Height
+.slides-list,
+.responsiveslideshow__figure {
+    position: relative;
+    min-height: 400px;
+}
+
+
+// Slideshow Images
+// ----------------
+
+// Use Background-image Method
+.responsiveslideshow__figure {
+    background-size: cover;
+    background-position: center;
+}
+// Hide Img Element
+.responsiveslideshow__image {
+    display: none;
+}
+
+
+// Slideshow Image Captions
+// ------------------------
+
+.responsiveslideshow .caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    .image-title {
+        color: @color-swatch1;
+    }
+}
+
+
+// Slideshow navigation - buttons
+// ------------------------------
+
+.slide-navigation {
+    text-align: center;
+    .button {
+        // Tablet and Desktop
+        @media only screen and (min-width:480px) {
+            margin: 10px 5px;
+            min-width: 122px;
+        }
+    }
+}
+
+// Responsive Columns
+.responsivecolumns .slide-navigation {
+    .control-text {
+        display: none;
+    }
+    .button {
+        min-width: inherit;
+    }
+}
+// Three Columns
+.columns-three-left,
+.columns-three-middle,
+.columns-three-right {
+    .slide-navigation .button {
+        margin: 10px 2px;
+        min-width: inherit;
+    }
+}
+
+
+// Slideshow Pagination - dots
+// ---------------------------
+
+.slide-pagination .pagination-list {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    .pagination-item {
+        display: inline-block;
+        margin: 0 2px;
+    }
+    .button--pagination {
+        width: 8px;
+        height: 8px;
+        padding: 0;
+        text-indent: -9999px;
+        overflow: hidden;
+        border: 1px solid @color-swatch4;
+        background: transparent;
+        box-shadow: none;
+    }
+    .pagination-item.selected .button {
+        background-color: @color-swatch4;
+    }
+}
+
+
+
+
+// -----------------------------
+// 8.  #Buttons
+// -----------------------------
+
+.buttonwidget {
+    &.widget-align-left { text-align: left; }
+    &.widget-align-right { text-align: right; }
+    &.widget-align-center { text-align: center; }
+}
+
+//  8.1  #STANDARD
+//  --------------
+
+.button {
+    padding: 13px 20px 10px 20px;
+    margin: 10px 0;
+    border: 2px solid @color-swatch5;
+    position: relative;
+    border-radius: 0;
+    transition: .2s;
+    outline: none;
+    white-space: nowrap;
+    @media @mobile {
+        padding: 12px 20px 5px 20px;
+        width: 100%;
+        text-align: center;
+    }
+    &:hover {
+        color: @color-swatch3;
+        &:before {
+            border: none;
+        }
+    }
+}
+
+// Button in template-header
+// ----------------------
+
+.template-header .button {
+    padding: 10px 45px 10px 20px;
+    margin: 0;
+    border: 2px solid @color-swatch4;
+    box-shadow: none;
+    border-radius: 0;
+    &:after {
+        content: "\2192";
+        font-size: 20px;
+        position: absolute;
+    }
+    &:hover {
+        border: 2px solid @color-swatch3;
+        color: @color-swatch3;
+    }
+}
+// Align Center for Tablet and Mobile
+@media @tablet {
+    .template-header .buttonwidget.widget-align-right { text-align: center; }
+}
+
+
+//  8.2  #TWEET
+//  --------------
+
+    // Add styles here
+
+
+//  8.4  #DROPBOX
+//  --------------
+
+.dropbox__label { margin-left: 10px; }
+
+
+//  8.5  #CLICK TO CALL
+//  --------------
+
+.clicktocall__phone-number-link {
+    cursor: default;
+    &:hover {
+        text-decoration: none;
+    }
+    @media @mobile {
+        padding: 12px 20px 12px 20px;
+        width: 100%;
+        text-align: center;
+        cursor: pointer;
+    }
+}
+
+
+.flex-item3 .clicktocall {
+    @media @tablet {
+        text-align: center;
+    }
+}
+
+
+//  8.5  #PAYPAL
+//  --------------
+
+    // Add styles here
+
+
+
+
+// -----------------------------
+// 9.  #Contact Form
+// -----------------------------
+
+// Global form styles are set in 'less > template.less' (4. #Forms)
+
+// Add styles here
+
+
+
+
+
+// -------------------------------
+// 10.  #Signup Form & Blog Search
+// -------------------------------
+
+// Style for tablet and desktop
+
+.blogsearch,
+.signupform {
+    .button {
+        margin: 0;
+        padding: 10px 20px 8px 20px;
+        height: 50px;
+    }
+}
+
+@media only screen and (min-width: 480px) {
+
+    .signupform__form-body,
+    .blogsearch__form-body,
+    .ecomproductslist__form-body {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-direction: normal;
+        -moz-box-direction: normal;
+        -webkit-box-orient: horizontal;
+        -moz-box-orient: horizontal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-box-pack: justify;
+        -moz-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+        -webkit-box-align: end;
+        -moz-box-align: end;
+        -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+        .form-group:first-child {
+            -ms-flex: 0 11 100%;
+            -webkit-flex: 0 11 100%;
+            flex: 0 11 100%;
+            -webkit-align-self: auto;
+            -ms-flex-item-align: auto;
+            align-self: auto;
+            margin-right: 10px;
+        }
+    }
+
+    .button--submit.blogsearch__input,
+    .button--submit.signupform__input {
+        padding: 8px 17px 5px 20px;
+        height: 50px;
+        margin: 0;
+    }
+
+}
+
+
+
+
+
+// -----------------------------
+// 11.  #Social Icons
+// -----------------------------
+
+.social-item {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 2px solid @color-swatch5;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    &:hover {
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;
+        .social-link {
+            text-decoration: none;
+            color: @color-swatch3;
+        }
+    }
+    .social-link {
+        color: @color-swatch5;
+        &.icon:before {
+            margin-right: 0;
+        }
+    }
+    .social-name {
+        display: none;
+    }
+}
+
+.template-footer .socialicons {
+    margin-bottom: 1em;
+}
+
+
+
+// -----------------------------
+// 12.  #Twitter Feed
+// -----------------------------
+
+.twitter {
+    padding: 20px;
+    border: 2px solid @color-swatch5;
+    .tweet-item {
+        .clearfix;
+    }
+    .avatar,
+    .tweet-wrap {
+        vertical-align: top;
+        float: left;
+    }
+    .avatar {
+        max-width: 18%;
+        margin-right: 2%;
+        @media @mobile {
+            display: none;
+        }
+    }
+    .tweet-wrap {
+        max-width: 80%;
+        @media @mobile {
+            max-width: 100%;
+            width: auto;
+            margin: 0 auto;
+        }
+    }
+}
+
+
+
+
+// -----------------------------
+// 13.  #Divider (Keyline)
+// -----------------------------
+
+.line {
+    margin: 3em 0;
+    width: 100%;
+}
+
+
+// Double Border
+.line .rule {
+    height: 1px;
+    background-color: @color-swatch5;
+    margin: 2em 0;
+}
+
+
+
+
+// -----------------------------
+// 14. #Profile
+// -----------------------------
+
+// Add styles here...
+
+// -----------------------------
+// 15. #Map
+// -----------------------------
+
+
+.bk-map.map.widget__map {
+    height: auto;
+}
+
+// -----------------------------
+// 15. #Yelp Widget
+// -----------------------------
+
+.yelpreview ul {
+    list-style: none;
+    margin-left: 0;
+}
+

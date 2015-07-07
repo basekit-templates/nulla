@@ -1,0 +1,100 @@
+// ----------------------------------
+// BaseKit Standard Template: Stylesheet
+// ----------------------------------
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+// 1. #LESS INCLUDES
+// 2. #PAGE SETTINGS
+// 3. #TEMPLATE STYLES
+// 4. #MIXINS
+
+
+
+// -----------------------------
+// 1. #LESS Includes
+// -----------------------------
+
+@import "@{templateCommon}/bk-less-framework.less"; // BaseKit LESS Framework
+
+// ** BaseKit LESS Framework is a set of non obtrusive LESS files that can be pulled into
+//    your template to guarentee widgets come to life. Proivides default styles for all widgets.
+
+// Template Includes
+@import "@{templateLocal}/less/template.less"; // Template
+@import "@{templateLocal}/less/widgets.less"; // Widgets
+
+// Plugin Includes
+@import "@{templateLocal}/less/plugins/plugin-blog.less"; // Plugin: Blog CSS
+@import "@{templateLocal}/less/plugins/plugin-menu.less"; // Plugin: Menu CSS
+@import "@{templateLocal}/less/plugins/plugin-ecommerce.less"; // Plugin: Ecommerce CSS
+
+
+
+
+// -----------------------------
+// 2. #Page Settings **
+// -----------------------------
+
+// ** Styles for advanced Baseplate template - remove when developing a custom template
+
+
+// Main Widget Zone
+// ----------------
+
+.canvas {
+    padding: 3em 15px;
+}
+
+.template-header-wrap,
+.template-title-wrap {
+	padding: 0 15px;
+}
+
+.template-header-wrap {
+    border: 1px solid @color-swatch5;
+    margin: 20px 15px;
+}
+
+// -----------------------------
+// 3. #Template Styles
+// -----------------------------
+
+// Widgets width
+
+.container .canvas .widget,
+.template-header,
+.template-title {
+    margin-bottom: 20px;
+    @media only screen and (min-width: 1300px) {
+        max-width: 1200px; // 1140px - 10% for margins
+        margin: 0 auto 20px;
+    }
+}
+
+.template-header,
+.template-title {
+	margin-bottom: 0;
+}
+
+// Links
+
+a {
+    color: @color-swatch3;
+}
+
+
+// -----------------------------
+// 3. #Mixins
+// -----------------------------
+
+
+.transition (@prop: all, @time: 0.5s, @ease: ease) {
+    -webkit-transition: @prop @time @ease;
+    -moz-transition:    @prop @time @ease;
+    -ms-transition:     @prop @time @ease;
+    -o-transition:      @prop @time @ease;
+    transition:         @prop @time @ease;
+}

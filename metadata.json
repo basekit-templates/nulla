@@ -1,0 +1,136 @@
+{
+    "name": "Nulla",
+    "widgetVersion":2,
+    "thumbnail": "thumbnail.png",
+    "screenshot": "screenshot.jpg",
+    "templateType":"standard",
+    "pageTypes": ["home"],
+    "tags": {
+    "en": ["creative", "agency", "design", "multipurpose", "portfolio", "contemporary", "flexible", "modern", "images", "photography"],
+    "es": ["creativo", "agencia", "diseño", "multiuso", "portafolio", "contemporáneo", "flexible", "moderno", "imágenes", "fotográfico"],
+    "br": ["criativo", "agência", "design", "multiuso", "portfolio", "contemporâneo", "flexível", "moderno", "imagens", "fotografia"]
+    },
+    "images":[
+        "images/feature-bg.jpg",
+        "images/ampersand-bg.jpg",
+        "images/logo.png"
+    ],
+    "colorSwatches":
+    {
+        "Swatch 1": {
+            "color1":"#fefef6",
+            "color2":"#7A4416",
+            "color3":"#F38A8A",
+            "color4":"#3f3c43",
+            "color5":"#8B8B8B",
+            "color6":"#3f3c43",
+            "color7":"#ffffff"
+        },
+        "Swatch 2": {
+            "color1":"#ffffff",
+            "color2":"#61CDFF",
+            "color3":"#FF6C61",
+            "color4":"#1C3E4E",
+            "color5":"#988c8b",
+            "color6":"#bfbfbd",
+            "color7":"#ffffff"
+        },
+        "Swatch 3": {
+            "color1":"#ffffff",
+            "color2":"#ED8C86",
+            "color3":"#38A192",
+            "color4":"#274351",
+            "color5":"#A6A299",
+            "color6":"#274351",
+            "color7":"#ffffff"
+        }
+    },
+    "fontSwatch": {
+       "title": "Helvetica Neue, Helvetica, Arial, sans-serif",
+        "font1": {
+            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-size": "28px",
+            "font-weight": "400",
+            "line-height": "38px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font2": {
+            "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
+            "font-size": "22px",
+            "font-weight": "700",
+            "line-height": "32px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font3": {
+            "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
+            "font-size": "20px",
+            "font-weight": "700",
+            "line-height": "30px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font4": {
+            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-size": "15px",
+            "font-weight": "400",
+            "line-height": "25px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        },
+        "font5": {
+            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-size": "15px",
+            "font-weight": "inherit",
+            "line-height": "28px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit"
+        },
+        "font6": {
+            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-size": "16px",
+            "font-weight": "inherit",
+            "line-height": "26px",
+            "color": "@color-swatch6",
+            "color-hover": "@color-swatch3",
+            "letter-spacing": "inherit",
+            "background-color": "@color-swatch1",
+            "background-color-hover": "@color-swatch1"
+         },
+        "font7": {
+            "font-family": "\"Helvetica\", Arial, sans-serif",
+            "font-size": "16px",
+            "font-weight": "inherit",
+            "line-height": "26px",
+            "color": "@color-swatch5",
+            "letter-spacing": "inherit",
+            "background-color": "transparent",
+            "background-color-hover": "transparent"
+        },
+        "font8": {
+            "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
+            "font-size": "60px",
+            "font-weight": "400",
+            "line-height": "70px",
+            "color": "@color-swatch7",
+            "letter-spacing": "inherit"
+        },
+        "font9": {
+            "font-family": "\"Palatino\", serif",
+            "font-size": "22px",
+            "font-weight": "inherit",
+            "line-height": "32px",
+            "color": "@color-swatch1",
+            "letter-spacing": "inherit"
+        },
+        "font10": {
+            "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
+            "font-size": "28px",
+            "font-weight": "700",
+            "line-height": "38px",
+            "color": "@color-swatch4",
+            "letter-spacing": "inherit"
+        }
+    }
+}

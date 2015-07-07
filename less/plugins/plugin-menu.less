@@ -1,0 +1,220 @@
+// -------------------------------------------
+// BaseKit Standard Template: LESS > Plugin: Menu
+// -------------------------------------------
+
+
+// -------------
+// Menu sections
+// -------------
+
+
+.menusections-body {
+	text-align: center;
+	padding: 1em 0;
+	@media only screen and (max-width: 550px) {
+		padding: 0;
+	}
+}
+
+.menu-item-name {
+	font-family: @font-swatch6-font-family;
+    color: @color-swatch3;
+    font-size: @font-swatch6-font-size;
+    font-weight: @font-swatch6-font-weight;
+    line-height: @font-swatch6-line-height;
+	&:hover {
+		color: @color-swatch2;
+		text-decoration: none;
+	}
+}
+
+.menusections-list {
+	display: table;
+    width: 100%;
+    margin: 0;
+    .menusections-item {
+		display: inline-block;
+		margin: 0 10px;
+		@media only screen and (max-width: 550px) {
+            width: 100%;
+            border-bottom: 1px solid darken(@color-swatch1,7%);
+            padding: 15px 0 10px 0;
+        }
+	    &:last-child {
+	        padding-right: 0;
+	        @media only screen and (max-width: 550px) {
+	            border-bottom: 1px solid darken(@color-swatch1,7%);
+	        }
+	    }
+    }
+}
+
+
+// ---------
+// Menu
+// ---------
+
+
+// Section Header
+.section-header {
+	margin: 0 0 2em;
+	padding: 2em 0;
+	text-align: center;
+	.section-title {
+		font-family: @font-swatch1-font-family;
+	    color: @font-swatch1-color;
+	    font-size: @font-swatch1-font-size;
+	    font-weight: @font-swatch1-font-weight;
+	    line-height: @font-swatch1-line-height;
+	    padding-bottom: 10px;
+	}
+}
+
+// Subtitile
+.section-subtitle {
+    font-family: @font-swatch5-font-family;
+    color: @font-swatch5-color;
+    font-size: @font-swatch5-font-size;
+    font-weight: @font-swatch5-font-weight;
+    line-height: @font-swatch5-line-height;
+}
+
+// Columns
+.menu-list:not(.menu-list--subsection) {
+	column-gap: 20px;
+	-moz-column-gap: 20px;
+	-webkit-column-gap: 20px;
+	@media @tablet {
+		column-gap: 20px;
+		-moz-column-gap: 20px;
+		-webkit-column-gap: 20px;
+	}
+}
+@media only screen and (max-width: 650px) {
+	.menu-list:not(.menu-list--subsection) {
+		column-count: 1;
+		-moz-column-count: 1;
+		-webkit-column-count: 1;
+		column-gap: 0;
+		-moz-column-gap: 0;
+		-webkit-column-gap: 0;
+	}
+}
+
+
+// Menu Item
+// -------------
+
+.menu-item {
+	display: inline-block;
+	padding: 2.5em;
+	margin: 10px 0;
+	width: 100%;
+	border: 2px solid lighten(@color-swatch5, 35%);
+	@media only screen and (max-width: 900px) {
+		padding: 2em;
+	}
+	@media @tablet {
+		padding: 1.5em;
+	}
+}
+
+
+// Item Image
+.menu .item-image {
+	background-color: transparent;
+	width: 100%;
+	.image-link {
+		background-color: transparent;
+	}
+}
+
+// Item Content
+.item-header {
+	padding-bottom: 20px;
+}
+.item-price {
+	font-family: @font-swatch3-font-family;
+    color: @font-swatch3-color;
+    font-size: @font-swatch3-font-size;
+    font-weight: @font-swatch3-font-weight;
+    line-height: @font-swatch3-line-height;
+}
+
+// Dietary icons
+.dietary-item.icon:not(.icon--not-spicy) {
+	&:before {
+		content: "\2713";
+		margin-right: 0;
+		color: @color-swatch2;
+	}
+}
+
+
+// Promoted Item
+// -------------
+
+.menu-item--featured {
+	border: 2px solid @color-swatch3;
+	background-color: transparent;
+	.item-title,
+	.item-price,
+	.item-subtitle {
+	    color: @color-swatch3;
+	}
+}
+
+
+// Sub-section
+// -------------
+
+// Sub-section Header
+.menu-section--subsection {
+	.section-header {
+		@media only screen and (max-width: 650px) {
+			margin: 0;
+			padding: 1em;
+		}
+	}
+	.section-title {
+		padding-bottom: 10px;
+	}
+}
+
+// Sub-section Featured
+// --------------------
+
+.menu-section--featured {
+	padding: 3em;
+	background-color: transparent;
+	border: 2px solid @color-swatch3;
+	@media only screen and (max-width: 900px) {
+		padding: 2em;
+	}
+	.menu-item {
+		padding: 0;
+	}
+	.menu-item--featured {
+		border: 2px solid @color-swatch3;
+		padding: 5px;
+	}
+	.item-article {
+		padding: 2em;
+	}
+}
+
+
+// Featured sub-section and item
+
+.menu .menu-item--featured .item-image .image-link,
+.menu .menu-section--featured .item-image .image-link {
+	background-color: transparent;
+}
+
+// Menu section note
+// -----------------
+
+.menu .section-note {
+	text-align: center;
+	padding-top: 20px;
+}

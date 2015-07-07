@@ -1,0 +1,27 @@
+<!-- Template Widgets -->
+<div class="template-header-wrap">
+    <div class='template-header flex-container'>
+
+        <div class="flex-item1">
+            <div class="brand">
+                {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+                {{widget('companyname', 'companyname', {"business": "profile", "showTplWidget":"0"})|raw}}
+            </div>
+        </div>
+
+        <div class="flex-item2">
+            {{widget('extendednavigation', 'navigation', {"align":"center"})|raw}}
+        </div>
+
+        <div class="flex-item3">
+                {{widget('clicktocall', 'headerclicktocall', {
+                'phoneText': '0123 456 789',
+                'italic': true,
+                'bold': false,
+                'fontSize': 18,
+                'align': 'widget-align-right'
+                })|raw}}
+        </div>
+
+    </div>
+</div>

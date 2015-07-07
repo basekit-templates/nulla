@@ -1,0 +1,451 @@
+// ------------------------------------------------
+// BaseKit Standard Template: LESS > Plugin: Ecommerce
+// ------------------------------------------------
+
+// -----------------------------f
+// #Table of Contents
+// -----------------------------
+
+// 1. #SINGLE PRODUCT
+// 2. #PRODUCT LIST
+// 3. #BASKET WIDGET
+// 4. #BASKET SUMMARY
+
+
+// -------------------------------
+// 1. #Single Product
+// -------------------------------
+
+// Single Product Images
+//----------------------
+
+.ecomproduct .product-image .image {
+    vertical-align: top;
+}
+
+.product-images {
+    float: left;
+    width: 100%;
+    margin-bottom: 1em;
+    @media only screen and (min-width: 770px) {
+        margin-right: 4%;
+        width: 45%;
+    }
+}
+
+.product-image .image-link {
+    background-color: transparent;
+}
+
+.product-gallery .gallery-item {
+    background-color: transparent;
+}
+
+@media only screen and (max-width: 450px) {
+    .product-article {
+        padding: 20px;
+    }
+}
+
+// Single Product Content
+//-----------------------
+
+.product-content {
+    @media only screen and (min-width: 770px) {
+        display: inline-block;
+        width: 51%;
+    }
+    .product-body {
+        margin-bottom: 20px;
+    }
+    // Product header
+    .product-header {
+        margin-bottom: 20px;
+    }
+    .product-title,
+    .product-price {
+        font-family: @font-swatch2-font-family;
+        font-size: @font-swatch2-font-size;
+        line-height: @font-swatch2-line-height;
+        padding-bottom: 0;
+    }
+    .product-title {
+        color: @font-swatch2-color;
+    }
+    .product-price {
+        color: @font-swatch5-color;
+    }
+    .product-header,
+    .legend {
+        width: 100%;
+        padding-bottom: 10px;
+        border-bottom: 1px solid lighten(@color-swatch5, 30%);
+    }
+    // Categories and tags
+    .product-attributes {
+        padding: 20px 0;
+        float: left;
+        width: 100%;
+    }
+    .category-link,
+    .tag-link {
+        &:hover {
+            color: @color-swatch2;
+            text-decoration: none;
+        }
+    }
+    // Product actions
+    .legend {
+        font-family: @font-swatch2-font-family;
+        font-size: @font-swatch2-font-size;
+        font-weight: @font-swatch2-font-weight;
+        line-height: @font-swatch2-line-height;
+        color: @font-swatch2-color;
+        letter-spacing: @font-swatch2-letter-spacing;
+    }
+    // Dropdown
+    .form-group {
+        margin: 20px 0;
+        .label {
+            color: @font-swatch3-color;
+        }
+        .select {
+            margin-top: 10px;
+            width: 100%;
+            border: 1px solid lighten(@color-swatch5, 30%);
+            border-radius: 0;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            &:hover {
+                color: @color-swatch3;
+                border: 1px solid @color-swatch3;
+            }
+        }
+        .button {
+            width: 45%;
+            @media only screen and (max-width: 450px) {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    // View basket button
+    .ecom-product-go-to-checkout-btn {
+        padding: 10px 20px;
+        width: 45%;
+        box-shadow: none;
+        text-align: center;
+        color: @color-swatch1;
+        background-color: @color-swatch4;
+        border: none;
+        &:hover {
+            background-color: @color-swatch3;
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .view-basket-wrap .button {
+        width: 100%;
+    }
+}
+
+
+// -----------------------------
+// 2. #Product List
+// -----------------------------
+
+
+// #Product Filter
+//----------------
+
+.product-filters {
+    .input--search {
+        height: 50px;
+        @media @mobile {
+            margin-bottom: 20px;
+        }
+    }
+    .fieldset--search {
+        legend {
+            margin-bottom: 10px;
+        }
+        label {
+            display: none;
+        }
+    }
+    .select--filter {
+        margin-right: 10px;
+        border: 1px solid lighten(@color-swatch5, 30%);
+    }
+}
+
+.ecomproductslist .button {
+    margin: 0;
+    padding: 10px 20px 8px 20px;
+    height: 50px;
+    @media @mobile {
+        margin-bottom: 20px;
+    }
+}
+
+// Style for mobile
+@media only screen and (max-width : 480px) {
+    .ecomproductslist .form-group {
+        width: 100%;
+    }
+}
+
+
+// Products List
+// -------------
+
+@media only screen and (max-width: 450px) {
+    .listing-body {
+        padding: 20px;
+    }
+}
+
+.product-list {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: space-between;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+// Product Item
+// ------------
+
+.product-item {
+    position: relative;
+    width: 32%;
+    margin-bottom: 2%;
+    // Display 100% at mobile
+    @media @mobile {
+        width: 100%;
+        margin-bottom: 4%;
+    }
+    .product-item-image,
+    .product-item-image .image-link {
+        background-color: transparent;
+    }
+    .product-item-title {
+        padding-bottom: 0;
+        font-size: @font-swatch5-font-size;
+        line-height: @font-swatch5-line-height;
+    }
+    .title-link:hover {
+        color: @color-swatch2;
+        text-decoration: none;
+    }
+    .product-item-price {
+        padding-bottom: 0;
+    }
+}
+
+.product-item-details {
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+    border: 1px solid lighten(@color-swatch5, 30%);
+}
+
+// Pagination
+// ----------
+
+.ecomproductslist .listing-footer {
+    margin: 20px 0;
+}
+
+.ecomproductslist .pagination-item {
+    margin-right: 10px;
+}
+
+
+// -----------------------------
+// 3. #Basket Widget
+// -----------------------------
+
+.basket-item {
+    position: relative;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    border-bottom: 1px solid lighten(@color-swatch5, 30%);
+}
+
+.item-image  { width: 200px; }
+
+// Display basket image and content inline
+
+.basket-item-image,
+.basket-item-details {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    @media @tablet {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+// Item Remove Button
+
+.item-remove {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    // Remove icon spacing
+    &:before {
+        margin-right: 0;
+        color: #cc0000;
+    }
+}
+
+// Hide button text
+
+.remove-text {
+    display: none;
+}
+
+// Basket Image
+
+.basket .image {
+    max-height: 200px;
+    max-width: 200px;
+    @media @mobile {
+        max-height: inherit;
+    }
+}
+
+// Quantity Field
+
+.quantity-wrap {
+    .button--quantity {
+        margin: 0;
+        line-height: 0;
+    }
+    @media @mobile {
+        max-width: 50%;
+        .quantity-field {
+            height: 40px;
+            padding: 9px;
+
+        }
+        .button--quantity {
+            margin: 0;
+            width: 25%;
+            height: 40px;
+        }
+    }
+}
+
+// Basket Total
+
+.basket-total {
+    padding-bottom: 20px;
+    border-bottom: 1px solid lighten(@color-swatch5, 30%);
+}
+
+// View Basket Button
+
+.summary-form {
+    border: none;
+    background-color: transparent;
+}
+
+.view-basket {
+    margin: 20px 0;
+}
+
+
+
+
+// -----------------------------
+// 4. #Basket Summary
+// -----------------------------
+
+
+.ecombasketsummary .summary-title {
+    padding-bottom: 35px;
+}
+
+// Table
+
+.ecombasketsummary {
+    table,
+    th,
+    td {
+        border: none;
+        background-color: transparent;
+    }
+    .table-row {
+        border: 1px solid lighten(@color-swatch5, 30%);
+
+        &:last-child {
+            border: none;
+        }
+    }
+    th:nth-child(4) {
+        padding: 16px 12px;
+        text-align: right;
+        @media @mobile {
+            text-align: left;
+        }
+    }
+}
+
+.ecombasketsummary .image {
+    max-width: 100px;
+    max-height: 80px;
+}
+
+.order-total,
+.summary-item-total {
+    padding: 16px 0;
+    text-align: right;
+    @media @mobile {
+        text-align: left;
+    }
+}
+
+.order-total {
+    font-weight: 700;
+    color: @color-swatch4;
+}
+
+.quantity-wrap {
+    .button {
+        border: none;
+        box-shadow: none;
+        background: transparent;
+        &:hover {
+            background-color: @color-swatch3;
+            color: @color-swatch1;
+        }
+    }
+}
