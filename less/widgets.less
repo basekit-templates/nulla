@@ -822,20 +822,10 @@ div#page-zones__main-widgets__galleryWidget {
 }
 
 @media only screen and (min-width: 480px) {
-    .ecomproductslist__fieldset--search .ecomproductslist__form-body .form-group:first-child {
-        .form-group:first-child {
-            -ms-flex: 1 1 100%;
-            -webkit-flex: 1 1 100%;
-            flex: 1 1 100%;
-        }
-    }
-}
-
-@media only screen and (min-width: 480px) {
 
     .signupform__form-body,
     .blogsearch__form-body,
-    .ecomproductslist__fieldset--search .ecomproductslist__form-body
+    .ecomproductslist .fieldset--search .form-body
     {
         display: -webkit-box;
         display: -moz-box;
@@ -885,7 +875,13 @@ div#page-zones__main-widgets__galleryWidget {
 
 }
 
-
+@media only screen and (min-width: 480px) {
+    .ecomproductslist .fieldset--search .form-body .form-group:first-child {
+        -ms-flex: 1 1 100%;
+        -webkit-flex: 1 1 100%;
+        flex: 1 1 100%;
+    }
+}
 
 
 
