@@ -107,7 +107,11 @@
 .navigation-list--children {
     white-space: normal;
     width: auto;
+    min-width: 200px;
     border: 1px solid lighten(@color-swatch5, 35%);
+    @media @tablet {
+        min-width: 100%;
+    }
 }
 
 // Hover effect for desktop
