@@ -1,6 +1,6 @@
-// -------------------------------------------
+// ----------------------------------------------
 // BaseKit Standard Template: LESS > Plugin: Blog
-// -------------------------------------------
+// ----------------------------------------------
 
 
 // ----------------
@@ -30,7 +30,7 @@
     -moz-column-gap: 20px;
     -webkit-column-count: 3;
     -webkit-column-gap : 20px;
-    @media @tablet {
+    @media only screen and (max-width: 850px) {
         column-count: 2;
         -moz-column-count: 2;
         -webkit-column-count: 2;
@@ -61,6 +61,14 @@
     }
     .post-image {
         display: none;
+    }
+    .post-title {
+        word-break: break-word;
+        -ms-word-break: break-all;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
     }
     .title-link,
     .read-more {
